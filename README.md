@@ -3,13 +3,15 @@
 ## Configuration files
 
 1. Setting properties in ```application.properties```.
-    1. Find ```application.properties_template``` file in directory ```./src/main/resources```.
+    1. Find ```application.properties_template``` file in ```./src/main/resources``` directory.
     2. Create a copy and rename it to ```application.properties```.
     3. Redefine property values according to the environmental setting you want to work with.
+
+    Property file contains <b>MongoDB</b> connection parameters.
 2. Setting logger configuration in ```log4j2.xml```.
-    1. Find ```log4j2.xml_template``` file in directory ```./src/main/resources```.
+    1. Find ```log4j2.xml_template``` file in ```./src/main/resources``` directory.
     2. Create a copy and rename it to ```log4j2.xml```.
-    3. Redefine property values according to the environmental setting you want to work with.
+    3. Redefine xml structure according to the environmental setting you want to work with.
 
     Default configuration provides logging divided into 3 log files located in ```./logs``` directory:
     1. ```apache.log``` with INFO level logging over org.apache package
