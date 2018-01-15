@@ -62,7 +62,7 @@
             <AppenderRef ref="SPRING_FRAMEWORK_LOG" />
             <AppenderRef ref="Console-Appender" />
         </Logger>
-        <Logger name="org.apache" level="all" additivity="false">
+        <Logger name="org.apache" level="info" additivity="false">
             <AppenderRef ref="APACHE_LOG" />
             <AppenderRef ref="Console-Appender" />
         </Logger>
