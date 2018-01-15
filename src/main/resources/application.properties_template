@@ -1,0 +1,24 @@
+###############
+##  MongoDB  ##
+###############
+
+# Properties for creating MongoDB connection
+mongodb.databaseName=BlockBash
+mongodb.databaseHost=localhost
+mongodb.databasePort=27017
+
+# If property set to true, database connection uses authentication via credentials
+mongodb.isDatabaseAuthenticated=false
+# Credentials for MongoDB authentication (userName, userPassword and databaseName where the users are defined)
+mongodb.userName=Admin
+mongodb.userPassword=Admin123
+mongodb.userDatabase=database_Name
+
+
+
+#########################
+##  Server deployment  ##
+#########################
+
+# Port on which all services will be available
+server.port=8082
