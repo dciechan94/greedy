@@ -13,7 +13,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.mongodb.config.AbstractMongoConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import pl.block.bash.ItemDAO;
+import pl.block.bash.ItemDAOImpl;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.Collections;
 
 @Configuration
@@ -67,6 +72,21 @@ public class MongoConfiguration extends AbstractMongoConfiguration {
             LOGGER.error("Cannot connect to MongoDB database. Host:port = {}:{}, database name = {}", databaseHost, databasePort, "EduQuiz", e);
             throw new RuntimeException("Cannot connect to MongoDB database", e);
         }
+    }
+
+    @Bean
+    public ItemDAO itemDAO() {
+        LOGGER.info("Creating 'itemDAO' bean");
+        return new ItemDAOImpl();
+
+    }
+
+    @Bean
+    public EntityManager entityManager() {
+        LOGGER.info("Creating 'entityManager' bean");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory( "persistenceUnitName" );
+        return entityManagerFactory.createEntityManager();
+
     }
 
     @Override

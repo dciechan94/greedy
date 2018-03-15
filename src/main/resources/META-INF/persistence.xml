@@ -8,7 +8,12 @@
 
     <persistence-unit name="persistenceUnitName">
 
+        <class>pl.block.bash.Item</class>
+        <class>pl.block.bash.Bid</class>
+        <class>pl.block.bash.ItemBidSummary</class>
         <properties>
+
+
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5433/pgTest" /> <!-- BD Mane -->
             <property name="javax.persistence.jdbc.user" value="postgres" /> <!-- DB User -->
